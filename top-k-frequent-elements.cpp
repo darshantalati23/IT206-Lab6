@@ -3,14 +3,11 @@ using namespace std;
 class Solution {
     public:
         vector<pair<int, int>> sortMapByFreqDecreasing(map<int, int>& m) {
-            // Convert map to vector of pairs
+            
             vector<pair<int, int>> freqVec(m.begin(), m.end());
             
-            // Sort in decreasing order based on frequency (second element)
             sort(freqVec.begin(), freqVec.end(), 
                 [](const pair<int, int>& a, const pair<int, int>& b) {
-                    // If frequencies are equal, you can add secondary sorting criteria
-                    // Here we just sort by frequency
                     return a.second > b.second;
                 });
             
